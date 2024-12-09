@@ -1,78 +1,64 @@
 <html lang="en">
- <head>
+<head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Portfolio
-  </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
+  <title>Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-  <style>
-   body {
-            font-family: 'Roboto', sans-serif;
-        }
-  </style>
- </head>
- <body class="bg-gray-50">
-  <header class="flex justify-between items-center p-6 bg-white shadow-md">
-   <div class="text-2xl font-bold text-green-600">
-    brecht.
-   </div>
-   <nav class="space-x-6">
-    <a class="text-gray-700 hover:text-green-600" href="index.html">
-     Home
-    </a>
-    <a class="text-gray-700 hover:text-green-600" href="aboutme.html">
-     About
-    </a>
-    <a class="text-gray-700 hover:text-green-600" href="accomplishments.html">
-     Portfolio
-    </a>
-    <a class="text-gray-700 hover:text-green-600" href="cv-page.html">
-     mijn cv
-    </a>
-    <a class="text-gray-700 hover:text-green-600" href="contactform.html">
-     Contact
-   </a>
-  </header>
-  <main class="flex flex-col-reverse lg:flex-row items-center justify-between p-6 lg:p-24">
-   <div class="lg:w-1/2 space-y-6">
-    <h1 class="text-4xl lg:text-5xl font-bold text-gray-800">
-     Hey ik ben
-     <span class="text-green-600">
-      Brecht Bondue
-     </span>
-    </h1>
-    <h2 class="text-2xl font-semibold text-gray-700">
-     Systeem en netwerkbeheerder
-    </h2>
-    <p class="text-gray-600">
-     Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore et officiis suscipit ut assumenda libero tenetur expedita eaque, quaerat quasi.
-    </p>
-    <div class="space-x-4">
-     <a class="px-6 py-3 bg-green-600 text-white rounded-full hover:bg-green-700" href="contactform.html">
-      Hire Me
-     </a>
-     <a class="px-6 py-3 border border-green-600 text-green-600 rounded-full hover:bg-green-50" href="accomplishments.html">
-      See Projects
-     </a>
+</head>
+<body class="bg-gray-100">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+      <a class="text-green-600 text-2xl font-bold" href="#">brecht.</a>
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-gray-700 focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+      <div id="menu" class="hidden md:flex space-x-4">
+        <a class="text-gray-700 hover:text-gray-900" href="index.html">Home</a>
+        <a class="text-gray-700 hover:text-gray-900" href="aboutme.html">About</a>
+        <a class="text-gray-700 hover:text-gray-900" href="accomplishments.html">Portfolio</a>
+        <a class="text-gray-700 hover:text-gray-900" href="cv-page.html">mijn cv</a>
+        <a class="text-gray-700 hover:text-gray-900" href="contactform.html">Contact</a>
+      </div>
     </div>
-    <div class="flex space-x-4 mt-6">
-     <a class="text-green-600 hover:text-green-800" href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">
-      <i class="fab fa-linkedin fa-2x">
-    </i>
-    </a>
-     <a class="text-green-600 hover:text-green-800" href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">
-      <i class="fab fa-facebook-f fa-2x">
-    </i>
-     </a>
+    <div id="mobile-menu" class="md:hidden hidden">
+      <a class="block text-gray-700 hover:text-gray-900 px-4 py-2" href="index.html">Home</a>
+      <a class="block text-gray-700 hover:text-gray-900 px-4 py-2" href="aboutme.html">About</a>
+      <a class="block text-gray-700 hover:text-gray-900 px-4 py-2" href="accomplishments.html">Portfolio</a>
+      <a class="block text-gray-700 hover:text-gray-900 px-4 py-2" href="cv-page.html">mijn cv</a>
+      <a class="block text-gray-700 hover:text-gray-900 px-4 py-2" href="contactform.html">Contact</a>
     </div>
-   </div>
-   <div class="lg:w-1/2">
-    <img alt="foto van mezelf" class="rounded-lg shadow-lg" height="96" src="brechtmug2.jpg" width="400"/>
-   </div>
-  </main>
- </body>
+  </nav>
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center">
+    <div class="md:w-1/2 mb-8 md:mb-0">
+      <h1 class="text-4xl font-bold text-gray-800 mb-4">Hey ik ben <span class="text-green-600">Brecht Bondu</span></h1>
+      <h2 class="text-xl text-gray-700 mb-4">Systeem en netwerkbeheerder</h2>
+      <p class="text-gray-600 mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore et officiis suscipit ut assumenda libero tenetur expedita eaque, quaerat quasi.</p>
+      <div class="flex space-x-4 mb-6">
+        <a class="bg-green-600 text-white px-4 py-2 rounded-full" href="contactform.html">Hire Me</a>
+        <a class="border border-green-600 text-green-600 px-4 py-2 rounded-full" href="accomplishments.html">See Projects</a>
+      </div>
+      <div class="flex space-x-4">
+        <a class="text-green-600 text-2xl" href="#"><i class="fab fa-linkedin"></i></a>
+        <a class="text-green-600 text-2xl" href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+    <div class="md:w-1/2">
+      <img alt="Person sitting at a table with a drink, with a scenic evening background" class="rounded-lg shadow-lg" height="500" src="https://storage.googleapis.com/a1aa/image/UKshcOEebQxuSqeo5oKzh8dApAPrzelijFuC25Ve1C0idZkPB.jpg" width="400"/>
+    </div>
+  </div>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
 </html>
