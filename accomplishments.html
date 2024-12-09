@@ -14,29 +14,32 @@
             font-family: 'Roboto', sans-serif;
         }
   </style>
- </head>
- <body class="bg-gray-50">
-  <header class="flex justify-between items-center p-6 bg-white shadow-md">
-   <div class="text-2xl font-bold text-green-600">
-    Brecht.
-   </div>
-   <nav class="space-x-6">
-    <a class="text-gray-700 hover:text-green-600" href="index.html">
-     Home
-    </a>
-    <a class="text-gray-700 hover:text-green-600" href="aboutme.html">
-     About
-    </a>
-    <a class="text-gray-700 hover:text-green-600" href="accomplishments.html">
-     Portfolio
-    </a>
-    <a class="text-gray-700 hover:text-green-600" href="cv-page.html">
-     mijn-cv
-    </a>
-    <a class="text-gray-700 hover:text-green-600" href="contactform.html">
-     Contact
-    </a>
-  </header>
+<nav class="bg-white shadow-md">
+  <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+    <a class="text-green-600 text-2xl font-bold" href="index.html">brecht.</a>
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-gray-700 focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+    <div id="menu" class="hidden md:flex space-x-4">
+      <a class="text-gray-700 hover:text-gray-900" href="index.html">Home</a>
+      <a class="text-gray-700 hover:text-gray-900" href="aboutme.html">About</a>
+      <a class="text-gray-700 hover:text-gray-900" href="accomplishments.html">Portfolio</a>
+      <a class="text-gray-700 hover:text-gray-900" href="cv-page.html">mijn cv</a>
+      <a class="text-gray-700 hover:text-gray-900" href="contactform.html">Contact</a>
+      <button onclick="unlockButton()" class="text-gray-700 hover:text-gray-900">Unlock Extra</button>
+          <a id="locked-button" class="text-gray-700 hover:text-gray-900 hidden" href="extra.html">Extra</a>
+    </div>
+  </div>
+  <div id="mobile-menu" class="md:hidden hidden">
+    <a class="block text-gray-700 hover:text-gray-900 px-4 py-2" href="index.html">Home</a>
+    <a class="block text-gray-700 hover:text-gray-900 px-4 py-2" href="aboutme.html">About</a>
+    <a class="block text-gray-700 hover:text-gray-900 px-4 py-2" href="accomplishments.html">Portfolio</a>
+    <a class="block text-gray-700 hover:text-gray-900 px-4 py-2" href="cv-page.html">mijn cv</a>
+    <a class="block text-gray-700 hover:text-gray-900 px-4 py-2" href="contactform.html">Contact</a>
+  </div>
+</nav>
   <main class="flex flex-col items-center justify-center p-6 lg:p-24">
    <div class="w-full max-w-4xl bg-white p-8 rounded-lg shadow-lg">
     <h2 class="text-3xl font-bold text-gray-800 mb-6">
@@ -44,7 +47,7 @@
     </h2>
     <ul class="space-y-4">
      <li class="flex items-start space-x-4">
-      <div class="text-purple-600">
+      <div class="text-green-600">
        <i class="fas fa-briefcase fa-2x">
        </i>
       </div>
@@ -105,6 +108,15 @@
      </li>
     </ul>
    </div>
+   <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
   </main>
  </body>
 </html>

@@ -11,17 +11,32 @@
             font-family: 'Roboto', sans-serif;
         }
     </style>
-</head>
-<body class="bg-gray-50">
-    <header class="flex justify-between items-center p-6 bg-white shadow-md">
-        <div class="text-2xl font-bold text-green-600">brecht.</div>
-        <nav class="space-x-6">
-            <a class="text-gray-700 hover:text-green-600" href="index.html">Home</a>
-            <a class="text-gray-700 hover:text-green-600" href="aboutme.html">About</a>
-            <a class="text-gray-700 hover:text-green-600" href="accomplishments.html">Portfolio</a>
-            <a class="text-gray-700 hover:text-green-600" href="cv-page.html">CV</a>
-            <a class="text-gray-700 hover:text-green-600" href="contactform.html">Contact</a>
-    </header>
+<nav class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+      <a class="text-green-600 text-2xl font-bold" href="index.html">brecht.</a>
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-gray-700 focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+      <div id="menu" class="hidden md:flex space-x-4">
+        <a class="text-gray-700 hover:text-gray-900" href="index.html">Home</a>
+        <a class="text-gray-700 hover:text-gray-900" href="aboutme.html">About</a>
+        <a class="text-gray-700 hover:text-gray-900" href="accomplishments.html">Portfolio</a>
+        <a class="text-gray-700 hover:text-gray-900" href="cv-page.html">mijn cv</a>
+        <a class="text-gray-700 hover:text-gray-900" href="contactform.html">Contact</a>
+        <button onclick="unlockButton()" class="text-gray-700 hover:text-gray-900">Unlock Extra</button>
+            <a id="locked-button" class="text-gray-700 hover:text-gray-900 hidden" href="extra.html">Extra</a>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden">
+      <a class="block text-gray-700 hover:text-gray-900 px-4 py-2" href="index.html">Home</a>
+      <a class="block text-gray-700 hover:text-gray-900 px-4 py-2" href="aboutme.html">About</a>
+      <a class="block text-gray-700 hover:text-gray-900 px-4 py-2" href="accomplishments.html">Portfolio</a>
+      <a class="block text-gray-700 hover:text-gray-900 px-4 py-2" href="cv-page.html">mijn cv</a>
+      <a class="block text-gray-700 hover:text-gray-900 px-4 py-2" href="contactform.html">Contact</a>
+    </div>
+  </nav>
     <main class="flex flex-col items-center justify-center p-6 lg:p-24">
         <div class="w-full max-w-lg bg-white p-8 rounded-lg shadow-lg">
             <h2 class="text-3xl font-bold text-gray-800 mb-6">My Contact Information</h2>
@@ -32,15 +47,11 @@
                 </div>
                 <div>
                     <label class="block text-gray-700 font-medium mb-2" for="email">Email</label>
-                    <input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" id="email" name="email" type="email" value="bondue.brecht@gmail.com" readonly/>
+                    <input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" id="email" name="email" type="email" value="brecht@bondue.net" readonly/>
                 </div>
                 <div>
                     <label class="block text-gray-700 font-medium mb-2" for="phone">Phone</label>
                     <input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" id="phone" name="phone" type="text" value="+1234567890" readonly/>
-                </div>
-                <div>
-                    <label class="block text-gray-700 font-medium mb-2" for="address">Address</label>
-                    <input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" id="address" name="address" type="text" value="123 Main St, Anytown, USA" readonly/>
                 </div>
                 <div>
                     <label class="block text-gray-700 font-medium mb-2" for="linkedin">LinkedIn</label>
@@ -48,10 +59,19 @@
                 </div>
                 <div>
                     <label class="block text-gray-700 font-medium mb-2" for="github">GitHub</label>
-                    <input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" id="github" name="github" type="text" value="github.com/joegreyson" readonly/>
+                    <input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600" id="github" name="github" type="text" value="github.com/greexdy" readonly/>
                 </div>
             </form>
         </div>
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const menu = document.getElementById('menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+        
+            menuBtn.addEventListener('click', () => {
+              mobileMenu.classList.toggle('hidden');
+            });
+          </script>
     </main>
 </body>
 </html>
